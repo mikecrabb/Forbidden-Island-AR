@@ -1,0 +1,215 @@
+@import "fonts.css";
+@import "squares.css";
+@import "notification.css";
+
+
+
+.controlBoard{
+    width: 490px;
+    height: 490px;
+    /*GRID*/
+    background-image: repeating-linear-gradient(0deg,transparent,transparent 59px,#CCC 59px,#CCC 60px),repeating-linear-gradient(-90deg,transparent,transparent 59px,#CCC 59px,#CCC 60px);
+    background-size: 60px 60px;
+    overflow: hidden;
+
+}
+
+.projectedBoard{
+    width: 900px;
+    height: 900px;
+    overflow: hidden;
+
+}
+
+#boardContainer{
+    width: 900px;
+    height: 900px;
+    margin: auto;
+}
+
+.mainBack{
+    background-color: black;
+}
+
+.controls{
+    width: 600px;
+    height: 600px;
+    background-color: gainsboro;
+    display: inline-block;
+
+}
+
+.board{
+    background-color: black;
+    position: absolute;
+
+}
+
+.boardBackground{
+     background-image: url("../images/Island-Ground.png");
+     width: 75%;
+     height: 70%;
+     position: absolute;
+     background-size: 100%;
+     background-repeat: no-repeat;
+     top: 25%;
+     left: 16%;
+ }
+
+.treasure{
+    width: 12%;
+    height: 12%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+
+}
+
+.stoneIsland{
+    background-image: url("../images/Stone-Island.png");
+    top: 15%;
+    left: 16%;
+}
+
+.lionIsland{
+    background-image: url("../images/Lion-Island.png");
+    top: 15%;
+    left: 76%;
+}
+
+.floodIsland{
+    background-image: url("../images/Cup-Island.png");
+    top: 10%;
+    left: 36%;
+}
+
+.fireIsland{
+    background-image: url("../images/Fire-Island.png");
+    top: 10%;
+    left: 56%;
+}
+
+.player{
+    background-image: url("../images/Treasure-%20Chest.png");
+    width: 40%;
+    height: 30%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.player1{
+    top: 75%;
+    left: 60%;
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+}
+
+.player2{
+    top: 80%;
+    left: 25%;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.player3{
+    top: 70%;
+    left: -10%;
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+
+.deck{
+    width: 19%;
+    height: 30%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+
+}
+
+.floodDeck{
+     background-image: url("../images/Flood-Island.png");
+     top: 50%;
+     left: 78%;
+     -webkit-transform: rotate(6deg);
+     -moz-transform: rotate(6deg);
+     -ms-transform: rotate(6deg);
+     -o-transform: rotate(6deg);
+     transform: rotate(6deg);
+ }
+
+.treasureDeck{
+    background-image: url("../images/Treasure-Island.png");
+    top: 47%;
+    left: 1%;
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+}
+
+.lighthouse{
+    background-image: url("../images/Lighthouse.gif");
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 21.5%;
+    left: 12%;
+}
+
+.helecopter{
+    background-image: url("../images/Helicopter.gif");
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 36%;
+    left: 73%;
+}
+
+.lightning{
+    background-image: url("../images/Island-Ground-White.png");
+    width: 75%;
+    height: 70%;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 25%;
+    left: 16%;
+    display: none;
+}
+
+/*RAIN DEMO*/
+.drop {
+    background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(rgba(255,255,255,0.6))  );
+    background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,.6) 100%);
+    width:1px;
+    height:89px;
+    position: absolute;
+    bottom:200px;
+    -webkit-animation: fall .63s linear infinite;
+    -moz-animation: fall .63s linear infinite;
+
+}
+
+/* animate the drops*/
+@-webkit-keyframes fall {
+    to {margin-top:700px;}
+}
+@-moz-keyframes fall {
+    to {margin-top:700px;}
+}

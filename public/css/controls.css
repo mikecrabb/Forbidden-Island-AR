@@ -1,0 +1,47 @@
+.controls{
+    padding: 30px;
+}
+
+.water{
+    /*
+    background-color: deepskyblue;
+    */
+}
+
+.waterRow{
+display: block;
+    height: 29px;
+}
+
+.water{
+ width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+.filled-water{
+    background-color: dodgerblue;
+}
+
+.pulseRow{
+    display: block;
+    height: 29px;
+}
+
+.pulse{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+.filled-pulse{
+    background-color: #3d3d3f;
+}
+
+.gameBoard{
+    height: 520px;
+}
+
+.controlMain{
+    margin-top : 20px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projected Board</title>
+    <link rel="stylesheet" href="css/mainBoard.css">
+
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body class="mainBack">
+
+<div id="boardContainer">
+    <section class="board projectedBoard rain">
+
+        <div class="boardBackground"></div>
+
+        <!--Pulse Squares-->
+        <div class="pulseSquare oneOne"></div>
+        <div class="pulseSquare oneTwo"></div>
+        <div class="pulseSquare twoOne"></div>
+        <div class="pulseSquare twoTwo"></div>
+        <div class="pulseSquare twoThree"></div>
+        <div class="pulseSquare twoFour"></div>
+        <div class="pulseSquare threeOne"></div>
+        <div class="pulseSquare threeTwo"></div>
+        <div class="pulseSquare threeThree"></div>
+        <div class="pulseSquare threeFour"></div>
+        <div class="pulseSquare threeFive"></div>
+        <div class="pulseSquare threeSix"></div>
+        <div class="pulseSquare fourOne"></div>
+        <div class="pulseSquare fourTwo"></div>
+        <div class="pulseSquare fourThree"></div>
+        <div class="pulseSquare fourFour"></div>
+        <div class="pulseSquare fourFive"></div>
+        <div class="pulseSquare fourSix"></div>
+        <div class="pulseSquare fiveOne"></div>
+        <div class="pulseSquare fiveTwo"></div>
+        <div class="pulseSquare fiveThree"></div>
+        <div class="pulseSquare fiveFour"></div>
+        <div class="pulseSquare sixOne"></div>
+        <div class="pulseSquare sixTwo"></div>
+        <!--Pulse Squares-->
+
+        <!--Board Squares-->
+        <div class="square oneOne oneOne-square"></div>
+        <div class="square oneTwo oneTwo-square"></div>
+        <div class="square twoOne twoOne-square"></div>
+        <div class="square twoTwo twoTwo-square"></div>
+        <div class="square twoThree twoThree-square"></div>
+        <div class="square twoFour twoFour-square"></div>
+        <div class="square threeOne threeOne-square"></div>
+        <div class="square threeTwo threeTwo-square"></div>
+        <div class="square threeThree threeThree-square"></div>
+        <div class="square threeFour threeFour-square"></div>
+        <div class="square threeFive threeFive-square"></div>
+        <div class="square threeSix threeSix-square"></div>
+        <div class="square fourOne fourOne-square"></div>
+        <div class="square fourTwo fourTwo-square"></div>
+        <div class="square fourThree fourThree-square"></div>
+        <div class="square fourFour fourFour-square"></div>
+        <div class="square fourFive fourFive-square"></div>
+        <div class="square fourSix fourSix-square"></div>
+        <div class="square fiveOne fiveOne-square"></div>
+        <div class="square fiveTwo fiveTwo-square"></div>
+        <div class="square fiveThree fiveThree-square"></div>
+        <div class="square fiveFour fiveFour-square"></div>
+        <div class="square sixOne sixOne-square"></div>
+        <div class="square sixTwo sixTwo-square"></div>
+        <!--End of Board Squares-->
+
+
+        <div class="treasure stoneIsland"></div>
+        <div class="treasure lionIsland"></div>
+        <div class="treasure floodIsland"></div>
+        <div class="treasure fireIsland"></div>
+
+        <div class="player player1"></div>
+        <div class="player player2"></div>
+        <div class="player player3"></div>
+
+        <div class="deck floodDeck"></div>
+        <div class="deck treasureDeck"></div>
+
+        <div class="lighthouse"></div>
+        <div class="helecopter"></div>
+
+        <div class="genericNotification notification">
+            <h1 class="genericNoteTitle">Welcome to Forbidden Island</h1>
+
+            <p class="genericNoteText">Can you escape...do you dare!?</p>
+        </div>
+
+        <div class="playerTurn notification">
+            <h1 class="noteTitle">Time for the Navigator</h1>
+
+            <p class="noteText">You can move another player up to 2 adjacent tiles for 1 action</p>
+        </div>
+
+        <div class="playerImage"></div>
+
+        <div class="lightning"></div>
+    </section>
+</div>
+</body>
+</html>
+
+<script src="/scripts/forbiddenIsland.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/scripts/forbiddenIsland.sockets.js"></script>

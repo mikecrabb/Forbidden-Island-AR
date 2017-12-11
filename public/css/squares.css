@@ -1,0 +1,143 @@
+.square{
+    background-color: black;
+    height: 6.5%;
+    width: 6.5%;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.pulseSquare{
+    background-color: white;
+    height: 6.5%;
+    width: 6.5%;
+    position: absolute;
+}
+
+
+/* Row 1 */
+.oneOne{
+    left: 43%;
+    top: 27%;
+}
+
+.oneTwo{
+    left: 51%;
+    top: 27%;
+}
+
+/* Row 2 */
+.twoOne{
+    left: 35%;
+    top: 35%;
+}
+
+.twoTwo{
+    left: 43%;
+    top: 35%;
+}
+
+.twoThree{
+    left: 51%;
+    top: 35%;
+}
+
+.twoFour{
+    left: 59%;
+    top: 35%;
+}
+
+/* Row 3 */
+.threeOne{
+     left: 27%;
+     top: 43%;
+ }
+
+.threeTwo{
+    left: 35%;
+    top: 43%;
+}
+
+.threeThree{
+    left: 43%;
+    top: 43%;
+}
+
+.threeFour{
+    left: 51%;
+    top: 43%;
+}
+
+.threeFive{
+    left: 59%;
+    top: 43%;
+}
+
+.threeSix{
+    left: 67%;
+    top: 43%;
+}
+
+/* Row 4 */
+.fourOne{
+    left: 27%;
+    top: 51%;
+}
+
+.fourTwo{
+    left: 35%;
+    top: 51%;
+}
+
+.fourThree{
+    left: 43%;
+    top: 51%;
+}
+
+.fourFour{
+    left: 51%;
+    top: 51%;
+}
+
+.fourFive{
+    left: 59%;
+    top: 51%;
+}
+
+.fourSix{
+    left: 67%;
+    top: 51%;
+}
+
+/* Row 5 */
+.fiveOne{
+    left: 35%;
+    top: 59%;
+}
+
+.fiveTwo{
+    left: 43%;
+    top: 59%;
+}
+
+.fiveThree{
+    left: 51%;
+    top: 59%;
+}
+
+.fiveFour{
+    left: 59%;
+    top: 59%;
+}
+
+/* Row 6 */
+.sixOne{
+    left: 43%;
+    top: 67%;
+}
+
+.sixTwo{
+    left: 51%;
+    top: 67%;
+}
+

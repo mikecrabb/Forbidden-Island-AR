@@ -1,0 +1,11 @@
+/*FONTS*/
+@font-face {
+    font-family: arabian;
+    src: url(../fonts/arabian.ttf);
+}
+
+@font-face {
+    font-family: openSans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+/*END OF FONTS*/

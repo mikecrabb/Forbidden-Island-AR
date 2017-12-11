@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/mainBoard.css">
+    <link rel="stylesheet" href="assets/css/controls.css">
+
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <!--Material Design-->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css">
+
+</head>
+<body>
+<header>
+</header>
+
+<main>
+    <section class="controls">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Player Notifications</h3>
+            </div>
+
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="textHeader" class="col-md-2 control-label">Header Text</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="textHeader" class="headerToPlace" placeholder="Welcome to Forbidden Island">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="textText" class="col-md-2 control-label">Text Text</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="textText" placeholder="Can You Escape, Do you Dare!">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                        <p class="btn btn-raised btn-primary" onclick="notificationOn()">Generic Notification On</p>
+                        <p class="btn btn-raised btn-primary" onclick="notificationOff()"> Generic Notification Off</p>
+            </div>
+            <div class="panel-footer">
+                <p class="btn btn-raised btn-primary" onclick="NavNotificationOn()">Navigator Player Turn On</p>
+                <p class="btn btn-raised btn-primary" onclick="NavNotificationOff()"> Navigator Player Off</p>
+
+            </div>
+
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Weather Effects</h3>
+            </div>
+            <div class="panel-body">
+                <p class="btn btn-raised btn-primary" onclick="createRain(100)">Light Rain</p>
+                <p class="btn btn-raised btn-info" onclick="createRain(200)">Medium Rain</p>
+                <p class="btn btn-raised btn-warning" onclick="createRain(400)">Heavy Rain</p>
+                <p class="btn btn-raised btn-danger" onclick="createRain(800)">Torrential Rain</p></br>
+                <p class="btn btn-raised btn-default" onclick="stopRain();">Stop Rain</p>
+                <p class="btn btn-raised btn-default" onclick="generateLightning()">Generate Lightning</p>
+
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Tile Animations</div>
+            <div class="panel-body">
+        <div class="waterContainer col-md-6">
+            <h4>Flooded Area</h4>
+        <div class="waterRow">
+            <div class="water"></div>
+            <div class="water"></div>
+            <div class="water filled-water" onClick="floodArea('.oneOne-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.oneTwo')"></div>
+            <div class="water"></div>
+            <div class="water"></div>
+        </div>
+        <div class="waterRow">
+            <div class="water"></div>
+            <div class="water filled-water" onClick="floodArea('.twoOne-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.twoTwo-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.twoThree-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.twoFour-square')"></div>
+            <div class="water"></div>
+        </div>
+        <div class="waterRow">
+            <div class="water filled-water" onClick="floodArea('.threeOne-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.threeTwo-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.threeThree-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.threeFour-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.threeFive-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.threeSix-square')"></div>
+        </div>
+        <div class="waterRow">
+            <div class="water filled-water" onClick="floodArea('.fourOne-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.fourTwo-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.fourThree-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.fourFour-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.fourFive-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.fourSix-square')"></div>
+        </div>
+        <div class="waterRow">
+            <div class="water"></div>
+            <div class="water filled-water" onClick="floodArea('.fiveOne-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.fiveTwo-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.fiveThree-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.fiveFour-square')"></div>
+            <div class="water"></div>
+        </div>
+        <div class="waterRow">
+            <div class="water"></div>
+            <div class="water"></div>
+            <div class="water filled-water" onClick="floodArea('.sixOne-square')"></div>
+            <div class="water filled-water" onClick="floodArea('.sixTwo-square')"></div>
+            <div class="water"></div>
+            <div class="water"></div>
+        </div>
+        </div>
+
+
+
+        <div class="pulseContainer col-md-6">
+            <h4>Land Pulses</h4>
+        <div class="pulseRow">
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+            <div class="pulse filled-pulse p11" onClick="swOneOne()"></div>
+            <div class="pulse filled-pulse p12" onClick="swOneTwo()"></div>
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+        </div>
+        <div class="pulseRow">
+            <div class="pulse"></div>
+            <div class="pulse filled-pulse p21" onClick="swTwoOne()"></div>
+            <div class="pulse filled-pulse p22" onClick="swTwoTwo()"></div>
+            <div class="pulse filled-pulse p23" onClick="swTwoThree()"></div>
+            <div class="pulse filled-pulse p24" onClick="swTwoFour()"></div>
+            <div class="pulse"></div>
+        </div>
+        <div class="pulseRow">
+            <div class="pulse filled-pulse p31" onClick="swThreeOne()"></div>
+            <div class="pulse filled-pulse p32" onClick="swThreeTwo()"></div>
+            <div class="pulse filled-pulse p33" onClick="swThreeThree()"></div>
+            <div class="water filled-pulse p34" onClick="swThreeFour()"></div>
+            <div class="pulse filled-pulse p35" onClick="swThreeFive()"></div>
+            <div class="pulse filled-pulse p36" onClick="swThreeSix()"></div>
+        </div>
+        <div class="pulseRow">
+            <div class="pulse filled-pulse p41" onClick="swFourOne()"></div>
+            <div class="pulse filled-pulse p42" onClick="swFourTwo()"></div>
+            <div class="pulse filled-pulse p43" onClick="swFourThree()"></div>
+            <div class="pulse filled-pulse p44" onClick="swFourFour()"></div>
+            <div class="pulse filled-pulse p45" onClick="swFourFive()"></div>
+            <div class="pulse filled-pulse p46" onClick="swFourSix()"></div>
+        </div>
+        <div class="pulseRow">
+            <div class="pulse"></div>
+            <div class="pulse filled-pulse p51" onClick="swFiveOne()"></div>
+            <div class="pulse filled-pulse p52" onClick="swFiveTwo()"></div>
+            <div class="pulse filled-pulse p53" onClick="swFiveThree()"></div>
+            <div class="pulse filled-pulse p54" onClick="swFiveFour()"></div>
+            <div class="pulse"></div>
+        </div>
+        <div class="pulseRow">
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+            <div class="pulse filled-pulse p61" onClick="swSixOne()"></div>
+            <div class="pulse filled-pulse p62" onClick="swSixTwo()"></div>
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+        </div>
+        </div>
+        <p class="btn btn-raised btn-default" onclick='startPulsing()'>Start Pulsing</p>
+
+        <p class="btn btn-raised btn-default" onclick="stopPulsing()">Stop Pulsing</p>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Other Animations</div>
+            <div class="panel-body">
+                <p class="btn btn-raised btn-primary" onclick="moveHelecopter()">Move Helecopter</p>
+            </div>
+        </div>
+
+    </section>
+<div></div>
+    <section class="board controlBoard rain">
+
+        <div class="boardBackground"></div>
+
+        <!--Pulse Squares-->
+        <div class="pulseSquare oneOne"></div>
+        <div class="pulseSquare oneTwo"></div>
+        <div class="pulseSquare twoOne"></div>
+        <div class="pulseSquare twoTwo"></div>
+        <div class="pulseSquare twoThree"></div>
+        <div class="pulseSquare twoFour"></div>
+        <div class="pulseSquare threeOne"></div>
+        <div class="pulseSquare threeTwo"></div>
+        <div class="pulseSquare threeThree"></div>
+        <div class="pulseSquare threeFour"></div>
+        <div class="pulseSquare threeFive"></div>
+        <div class="pulseSquare threeSix"></div>
+        <div class="pulseSquare fourOne"></div>
+        <div class="pulseSquare fourTwo"></div>
+        <div class="pulseSquare fourThree"></div>
+        <div class="pulseSquare fourFour"></div>
+        <div class="pulseSquare fourFive"></div>
+        <div class="pulseSquare fourSix"></div>
+        <div class="pulseSquare fiveOne"></div>
+        <div class="pulseSquare fiveTwo"></div>
+        <div class="pulseSquare fiveThree"></div>
+        <div class="pulseSquare fiveFour"></div>
+        <div class="pulseSquare sixOne"></div>
+        <div class="pulseSquare sixTwo"></div>
+        <!--Pulse Squares-->
+
+        <!--Board Squares-->
+        <div class="square oneOne oneOne-square"></div>
+        <div class="square oneTwo oneTwo-square"></div>
+        <div class="square twoOne twoOne-square"></div>
+        <div class="square twoTwo twoTwo-square"></div>
+        <div class="square twoThree twoThree-square"></div>
+        <div class="square twoFour twoFour-square"></div>
+        <div class="square threeOne threeOne-square"></div>
+        <div class="square threeTwo threeTwo-square"></div>
+        <div class="square threeThree threeThree-square"></div>
+        <div class="square threeFour threeFour-square"></div>
+        <div class="square threeFive threeFive-square"></div>
+        <div class="square threeSix threeSix-square"></div>
+        <div class="square fourOne fourOne-square"></div>
+        <div class="square fourTwo fourTwo-square"></div>
+        <div class="square fourThree fourThree-square"></div>
+        <div class="square fourFour fourFour-square"></div>
+        <div class="square fourFive fourFive-square"></div>
+        <div class="square fourSix fourSix-square"></div>
+        <div class="square fiveOne fiveOne-square"></div>
+        <div class="square fiveTwo fiveTwo-square"></div>
+        <div class="square fiveThree fiveThree-square"></div>
+        <div class="square fiveFour fiveFour-square"></div>
+        <div class="square sixOne sixOne-square"></div>
+        <div class="square sixTwo sixTwo-square"></div>
+        <!--End of Board Squares-->
+
+
+        <div class="treasure stoneIsland"></div>
+        <div class="treasure lionIsland"></div>
+        <div class="treasure floodIsland"></div>
+        <div class="treasure fireIsland"></div>
+
+        <div class="player player1"></div>
+        <div class="player player2"></div>
+        <div class="player player3"></div>
+
+        <div class="deck floodDeck"></div>
+        <div class="deck treasureDeck"></div>
+
+        <div class="lighthouse"></div>
+        <div class="helecopter"></div>
+
+        <div class="genericNotification notification">
+            <h1 class="GenericnoteTitle">Welcome to Forbidden Island</h1>
+
+            <p class="GenericnoteText">Can you escape...do you dare!?</p>
+        </div>
+
+        <div class="playerTurn notification">
+            <h1 class="noteTitle">Time for the Navigator</h1>
+
+            <p class="noteText">You can move another player up to 2 adjacent tiles for 1 action</p>
+        </div>
+
+        <div class="playerImage"></div>
+
+        <div class="lightning"></div>
+    </section>
+
+
+</main>
+</body>
+</html>
+
+<script>
+    function notificationOn() {
+        $(".genericNotification").fadeIn("slow", function () {
+        });
+    }
+
+    function notificationOff() {
+        $(".genericNotification").fadeOut("slow", function () {
+        });
+    }
+
+    function NavNotificationOn() {
+        $('.genericNoteTitle').text('.headerToPlace');
+        $(".playerTurn").fadeIn("slow", function () {
+        });
+        $(".playerImage").fadeIn("slow", function () {
+        });
+    }
+
+    function NavNotificationOff() {
+        $(".playerTurn").fadeOut("slow", function () {
+        });
+        $(".playerImage").fadeOut("slow", function () {
+        });
+    }
+
+    function moveHelecopter() {
+        $(".helecopter").animate({
+            left: '30%',
+            top: '57%'
+        }, 2000);
+        $(".noteTitle").text('Time to escape!');
+        $(".noteText").text('Get everyone to the helecopter before the island sinks');
+        $(".genericNotification").fadeIn(1000, function () {
+        });
+    }
+
+    function generateLightning() {
+        $(".lightning").delay(500). fadeIn(2). delay(100). fadeOut(2). delay(700).fadeIn(2). delay(100). fadeOut(2). delay(300).fadeIn(2). delay(50). fadeOut(2);
+
+    }
+
+    function randRange(minNum, maxNum) {
+        return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
+    }
+
+    function stopRain() {
+        $("div").remove(".drop");
+    }
+
+    function createRain(nbDrop) {
+
+        for (i = 1; i < nbDrop; i++) {
+            var dropLeft = randRange(0, 600);
+            var dropTop = randRange(-1000, 700);
+            $('.rain').append('<div class="drop" id="drop' + i + '"></div>');
+            $('#drop' + i).css('left', dropLeft);
+            $('#drop' + i).css('top', dropTop);
+        }
+
+    }
+
+    function floodArea(areaClass) {
+        var color = $(areaClass).css('background-color');
+        console.log($(areaClass).css('background-color'))
+        if (color === 'rgb(30, 144, 255)') {
+            console.log("turning black");
+            $(areaClass).css('background-color', 'black');
+        } else {
+            $(areaClass).css('background-color', 'dodgerblue');
+            $(areaClass).css('background-image', "url('../images/Shark-Circling.gif')");
+            console.log("turning blue");
+        }
+    }
+
+    function startPulsing() {
+        pulsing = 'on';
+        pulse();
+    }
+
+    function stopPulsing() {
+        pulsing = 'off';
+        $('.p11').css('background-color', 'black');
+        $('.p12').css('background-color', 'black');
+        $('.p21').css('background-color', 'black');
+        $('.p22').css('background-color', 'black');
+        $('.p23').css('background-color', 'black');
+        $('.p24').css('background-color', 'black');
+        $('.p31').css('background-color', 'black');
+        $('.p32').css('background-color', 'black');
+        $('.p33').css('background-color', 'black');
+        $('.p34').css('background-color', 'black');
+        $('.p35').css('background-color', 'black');
+        $('.p36').css('background-color', 'black');
+        $('.p41').css('background-color', 'black');
+        $('.p42').css('background-color', 'black');
+        $('.p43').css('background-color', 'black');
+        $('.p44').css('background-color', 'black');
+        $('.p45').css('background-color', 'black');
+        $('.p46').css('background-color', 'black');
+        $('.p51').css('background-color', 'black');
+        $('.p52').css('background-color', 'black');
+        $('.p53').css('background-color', 'black');
+        $('.p54').css('background-color', 'black');
+        $('.p61').css('background-color', 'black');
+        $('.p62').css('background-color', 'black');
+        oneOnePulse = 'off';
+        oneTwoPulse = 'off';
+        twoOnePulse = 'off';
+        twoTwoPulse = 'off';
+        twoThreePulse = 'off';
+        twoFourPulse = 'off';
+        threeOnePulse = 'off';
+        threeTwoPulse = 'off';
+        threeThreePulse = 'off';
+        threeFourPulse = 'off';
+        threeFivePulse = 'off';
+        threeSixPulse = 'off';
+        fourOnePulse = 'off';
+        fourTwoPulse = 'off';
+        fourThreePulse = 'off';
+        fourFourPulse = 'off';
+        fourFivePulse = 'off';
+        fourSixPulse = 'off';
+        fiveOnePulse = 'off';
+        fiveTwoPulse = 'off';
+        fiveThreePulse = 'off';
+        fiveFourPulse = 'off';
+        sixOnePulse = 'off';
+        sixTwoPulse = 'off';
+
+    }
+
+    var pulsing = 'off';
+    var oneOnePulse = 'off';
+    var oneTwoPulse = 'off';
+    var twoOnePulse = 'off';
+    var twoTwoPulse = 'off';
+    var twoThreePulse = 'off';
+    var twoFourPulse = 'off';
+    var threeOnePulse = 'off';
+    var threeTwoPulse = 'off';
+    var threeThreePulse = 'off';
+    var threeFourPulse = 'off';
+    var threeFivePulse = 'off';
+    var threeSixPulse = 'off';
+    var fourOnePulse = 'off';
+    var fourTwoPulse = 'off';
+    var fourThreePulse = 'off';
+    var fourFourPulse = 'off';
+    var fourFivePulse = 'off';
+    var fourSixPulse = 'off';
+    var fiveOnePulse = 'off';
+    var fiveTwoPulse = 'off';
+    var fiveThreePulse = 'off';
+    var fiveFourPulse = 'off';
+    var sixOnePulse = 'off';
+    var sixTwoPulse = 'off';
+
+    function pulse() {
+        if (pulsing == 'on') {
+            if (oneOnePulse == 'on') {
+                $('.oneOne-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (oneTwoPulse == 'on') {
+                $('.oneTwo-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (twoOnePulse == 'on') {
+                $('.twoOne-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (twoTwoPulse == 'on') {
+                $('.twoTwo-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (twoThreePulse == 'on') {
+                $('.twoThree-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (twoFourPulse == 'on') {
+                $('.twoFour-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (threeOnePulse == 'on') {
+                $('.threeOne-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (threeTwoPulse == 'on') {
+                $('.threeTwo-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (threeThreePulse == 'on') {
+                $('.threeThree-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (threeFourPulse == 'on') {
+                $('.threeFour-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (threeFivePulse == 'on') {
+                $('.threeFive-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (threeSixPulse == 'on') {
+                $('.threeSix-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (fourOnePulse == 'on') {
+                $('.fourOne-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (fourTwoPulse == 'on') {
+                $('.fourTwo-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (fourThreePulse == 'on') {
+                $('.fourThree-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (fourFourPulse == 'on') {
+                $('.fourFour-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (fourFivePulse == 'on') {
+                $('.fourFive-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (fourSixPulse == 'on') {
+                $('.fourSix-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (fiveOnePulse == 'on') {
+                $('.fiveOne-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (fiveTwoPulse == 'on') {
+                $('.fiveTwo-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (fiveThreePulse == 'on') {
+                $('.fiveThree-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (fiveFourPulse == 'on') {
+                $('.fiveFour-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (sixOnePulse == 'on') {
+                $('.sixOne-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+            if (sixTwoPulse == 'on') {
+                $('.sixTwo-square').delay(200).fadeOut('500').delay(50).fadeIn('500');
+            }
+        } else {
+            return;
+        }
+    }
+
+    function swOneOne() {
+        if (oneOnePulse == 'on') {
+            oneOnePulse = 'off';
+            $('.p11').css('background-color', 'black');
+        } else {
+            oneOnePulse = 'on';
+            $('.p11').css('background-color', 'yellow');
+        }
+    }
+
+    function swOneTwo() {
+        if (oneTwoPulse == 'on') {
+            oneTwoPulse = 'off';
+            $('.p12').css('background-color', 'black');
+        } else {
+            oneTwoPulse = 'on';
+            $('.p12').css('background-color', 'yellow');
+        }
+    }
+
+    function swTwoOne() {
+        if (twoOnePulse == 'on') {
+            twoOnePulse = 'off';
+            $('.p21').css('background-color', 'black');
+        } else {
+            twoOnePulse = 'on';
+            $('.p21').css('background-color', 'yellow');
+        }
+    }
+
+    function swTwoTwo() {
+        if (twoTwoPulse == 'on') {
+            twoTwoPulse = 'off';
+            $('.p22').css('background-color', 'black');
+        } else {
+            twoTwoPulse = 'on';
+            $('.p22').css('background-color', 'yellow');
+        }
+    }
+
+    function swTwoThree() {
+        if (twoThreePulse == 'on') {
+            twoThreePulse = 'off';
+            $('.p23').css('background-color', 'black');
+        } else {
+            twoThreePulse = 'on';
+            $('.p23').css('background-color', 'yellow');
+        }
+    }
+
+    function swTwoFour() {
+        if (twoFourPulse == 'on') {
+            twoFourPulse = 'off';
+            $('.p24').css('background-color', 'black');
+        } else {
+            twoFourPulse = 'on';
+            $('.p24').css('background-color', 'yellow');
+        }
+    }
+
+    function swThreeOne() {
+        if (threeOnePulse == 'on') {
+            threeOnePulse = 'off';
+            $('.p31').css('background-color', 'black');
+        } else {
+            threeOnePulse = 'on';
+            $('.p31').css('background-color', 'yellow');
+        }
+    }
+
+    function swThreeTwo() {
+        if (threeTwoPulse == 'on') {
+            threeTwoPulse = 'off';
+            $('.p32').css('background-color', 'black');
+        } else {
+            threeTwoPulse = 'on';
+            $('.p32').css('background-color', 'yellow');
+        }
+    }
+
+    function swThreeThree() {
+        if (threeThreePulse == 'on') {
+            threeThreePulse = 'off';
+            $('.p33').css('background-color', 'black');
+        } else {
+            threeThreePulse = 'on';
+            $('.p33').css('background-color', 'yellow');
+        }
+    }
+
+    function swThreeFour() {
+        if (threeFourPulse == 'on') {
+            threeFourPulse = 'off';
+            $('.p34').css('background-color', 'black');
+        } else {
+            threeFourPulse = 'on';
+            $('.p34').css('background-color', 'yellow');
+        }
+    }
+
+    function swThreeFive() {
+        if (threeFivePulse == 'on') {
+            threeFivePulse = 'off';
+            $('.p35').css('background-color', 'black');
+        } else {
+            threeFivePulse = 'on';
+            $('.p35').css('background-color', 'yellow');
+        }
+    }
+
+    function swThreeSix() {
+        if (threeSixPulse == 'on') {
+            threeSixPulse = 'off';
+            $('.p36').css('background-color', 'black');
+        } else {
+            threeSixPulse = 'on';
+            $('.p36').css('background-color', 'yellow');
+        }
+    }
+
+    function swFourOne() {
+        if (fourOnePulse == 'on') {
+            fourOnePulse = 'off';
+            $('.p41').css('background-color', 'black');
+        } else {
+            fourOnePulse = 'on';
+            $('.p41').css('background-color', 'yellow');
+        }
+    }
+
+    function swFourTwo() {
+        if (fourTwoPulse == 'on') {
+            fourTwoPulse = 'off';
+            $('.p42').css('background-color', 'black');
+        } else {
+            fourTwoPulse = 'on';
+            $('.p42').css('background-color', 'yellow');
+        }
+    }
+
+    function swFourThree() {
+        if (fourThreePulse == 'on') {
+            fourThreePulse = 'off';
+            $('.p43').css('background-color', 'black');
+        } else {
+            fourThreePulse = 'on';
+            $('.p43').css('background-color', 'yellow');
+        }
+    }
+
+    function swFourFour() {
+        if (fourFourPulse == 'on') {
+            fourFourPulse = 'off';
+            $('.p44').css('background-color', 'black');
+        } else {
+            fourFourPulse = 'on';
+            $('.p44').css('background-color', 'yellow');
+        }
+    }
+
+    function swFourFive() {
+        if (fourFivePulse == 'on') {
+            fourFivePulse = 'off';
+            $('.p45').css('background-color', 'black');
+        } else {
+            fourFivePulse = 'on';
+            $('.p45').css('background-color', 'yellow');
+        }
+    }
+
+    function swFourSix() {
+        if (fourSixPulse == 'on') {
+            fourSixPulse = 'off';
+            $('.p46').css('background-color', 'black');
+        } else {
+            fourSixPulse = 'on';
+            $('.p46').css('background-color', 'yellow');
+        }
+    }
+
+    function swFiveOne() {
+        if (fiveOnePulse == 'on') {
+            fiveOnePulse = 'off';
+            $('.p51').css('background-color', 'black');
+        } else {
+            fiveOnePulse = 'on';
+            $('.p51').css('background-color', 'yellow');
+        }
+    }
+
+    function swFiveTwo() {
+        if (fiveTwoPulse == 'on') {
+            fiveTwoPulse = 'off';
+            $('.p52').css('background-color', 'black');
+        } else {
+            fiveTwoPulse = 'on';
+            $('.p52').css('background-color', 'yellow');
+        }
+    }
+
+    function swFiveThree() {
+        if (fiveThreePulse == 'on') {
+            fiveThreePulse = 'off';
+            $('.p53').css('background-color', 'black');
+        } else {
+            fiveThreePulse = 'on';
+            $('.p53').css('background-color', 'yellow');
+        }
+    }
+
+    function swFiveFour() {
+        if (fiveFourPulse == 'on') {
+            fiveFourPulse = 'off';
+            $('.p54').css('background-color', 'black');
+        } else {
+            fiveFourPulse = 'on';
+            $('.p54').css('background-color', 'yellow');
+        }
+    }
+
+    function swSixOne() {
+        if (sixOnePulse == 'on') {
+            sixOnePulse = 'off';
+            $('.p61').css('background-color', 'black');
+        } else {
+            sixOnePulse = 'on';
+            $('.p61').css('background-color', 'yellow');
+        }
+    }
+
+    function swSixTwo() {
+        if (sixTwoPulse == 'on') {
+            sixTwoPulse = 'off';
+            $('.p62').css('background-color', 'black');
+        } else {
+            sixTwoPulse = 'on';
+            $('.p62').css('background-color', 'yellow');
+        }
+    }
+
+</script>
